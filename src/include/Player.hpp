@@ -13,6 +13,7 @@ private:
 public:
     Player(std::string name) : name(name){}
     ~Player() = default;
+    std::string get_name(){return name;}
 };
 
 

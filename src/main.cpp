@@ -19,5 +19,5 @@ int main()
     Player player (name);
     std::vector<std::string> types(1,"plante");
     Pokemon bulbizarre("Bulbizarre",types);
-    
+    std::cout<<player.get_name()<<std::endl;
 }

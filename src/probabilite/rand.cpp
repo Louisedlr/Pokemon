@@ -18,7 +18,7 @@ int Bernouilli_distribution(float p)
 // {
     
 // }
-
+ 
 
 bool balanced_piece()
 {
