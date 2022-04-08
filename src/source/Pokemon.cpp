@@ -1,10 +1,5 @@
 #include "../include/Pokemon.hpp"
 
-Pokemon::Pokemon(std::string name,std::vector<std::string> types):name(name),types(types)
+Pokemon::Pokemon(std::string name,std::vector<std::string> types):_name(name),_types(types)
 {
-}
-
-void Pokemon::set_PC()
-{
-
 }

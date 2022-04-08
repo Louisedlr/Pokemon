@@ -7,13 +7,15 @@
 class Player
 {
 private:
-    std::string name;
-    std::vector<Pokemon> poke_bag;
-    std::vector<int> coord;
+    std::string _name;
+    std::vector<Pokemon> _poke_bag;
+    std::vector<int> _coord;
 public:
-    Player(std::string name) : name(name){}
+    Player(std::string name) : _name(name){}
     ~Player() = default;
-    std::string get_name(){return name;}
+    std::string get_name(){return _name;}
+    std::vector<Pokemon> get_poke_bag(){return _poke_bag;}
+    std::vector<int> get_coord(){return _coord;}
 };
 
 
