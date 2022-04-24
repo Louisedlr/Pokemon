@@ -6,7 +6,8 @@
 
 Map::Map()
 {
-    _tab = load_map();
+    _tab             = load_map();
+    _map_with_player = load_map();
 }
 
 std::vector<std::vector<char> > Map::load_map()
@@ -56,10 +57,20 @@ void Map::draw_map()
     int count = 0;
     for (size_t i = 0; i < SIZE_COLUMN; i++) {
         for (size_t j = 0; j < SIZE_COLUMN; j++) {
-            std::cout << _tab[i][j] << "  ";
+            std::cout << _map_with_player[i][j] << "  ";
             count++;
         }
 
         std::cout << std::endl;
     }
+}
+
+void Map::set_player_coord(std::vector<int> coord)
+{
+    _map_with_player[coord[1]][coord[0]] = 'O';
+}
+
+void Map::reset_map_with_player()
+{
+    _map_with_player = _tab;
 }
