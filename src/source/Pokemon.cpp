@@ -20,3 +20,10 @@ void Pokemon::display_pokemon()
         std::cout << i << ", ";
     }
 }
+
+void Pokemon::random_features()
+{
+    _PC    = 10;
+    _IV    = 20;
+    _shiny = balanced_piece();
+}
