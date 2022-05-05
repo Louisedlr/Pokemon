@@ -34,4 +34,5 @@ public:
     void add_pokemon(Pokemon pokemon);
     void player_move(char input);
     bool player_can_move(Map map, char input);
+    void display_poke_bag();
 };

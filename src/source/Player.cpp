@@ -74,9 +74,20 @@ bool Player::player_can_move(Map map, char input)
         }
         break;
 
+    case 'i':
+        display_poke_bag();
+
     default:
         std::cout << "Sorry I don't know that command!\n";
         return false;
         break;
+    }
+}
+
+void Player::display_poke_bag()
+{
+    for (auto i : _poke_bag) {
+        i.display_pokemon();
+        std::cout << std::endl;
     }
 }

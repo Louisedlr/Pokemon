@@ -45,6 +45,7 @@ int main()
                 std::cin >> y_n;
                 if (y_n == 'y') {
                     std::cout << "vous avez reussi" << std::endl;
+                    player.add_pokemon(pokemon1);
                 }
             }
             map.set_player_coord(player.get_coord());

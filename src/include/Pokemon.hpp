@@ -23,4 +23,5 @@ public:
     int                      get_IV() { return _IV; }
     bool                     get_shiny() { return _shiny; }
     std::vector<std::string> get_types() { return _types; }
+    void                     display_pokemon();
 };
