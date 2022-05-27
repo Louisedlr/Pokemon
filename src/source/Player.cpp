@@ -83,8 +83,10 @@ bool Player::player_can_move(Map map, char input)
 
 void Player::display_poke_bag()
 {
-    for (auto i : _poke_bag) {
-        i.display_pokemon();
+    for (size_t i = 0; i < _poke_bag.size(); i++) {
+        _poke_bag[i].display_pokemon();
         std::cout << std::endl;
+
+        std::cout << "test " << _poke_bag[i].get_PC() << std::endl;
     }
 }
