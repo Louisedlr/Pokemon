@@ -13,12 +13,12 @@ int main()
 {
     // int max = 0;
     // for (int i = 0; i < 500; i++) {
-    //     if (max < Exponential_distribution(0.15)) {
-    //         max = Exponential_distribution(0.15);
+    //     if (max < Geometric_distribution(0.2)) {
+    //         max = Geometric_distribution(0.2);
     //     }
-    //     std::cout << Exponential_distribution(0.15) << "    ";
+    //     std::cout << Geometric_distribution(0.2) << "    ";
     // }
-    // std::cout << "test exp  " << max << std::endl;
+    // std::cout << "test geo  " << max << std::endl;
 
     std::string name = "lou";
     std::cout << "Enter a name : " << std::endl;

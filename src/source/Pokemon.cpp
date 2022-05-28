@@ -10,6 +10,7 @@ void Pokemon::display_pokemon()
 {
     std::cout << std::endl;
     std::cout << "Nom : " << get_name() << std::endl;
+    std::cout << "PV : " << get_PV() << std::endl;
     std::cout << "PC : " << get_PC() << std::endl;
     std::cout << "IV : " << get_IV() << std::endl;
     if (get_shiny()) {
@@ -25,5 +26,6 @@ void Pokemon::random_features()
 {
     _PC    = Erlang_distribution(1, 5) * 10;
     _IV    = Poisson_dstribution(16);
+    _PV    = Geometric_distribution(0.2) * 10;
     _shiny = Bernouilli_distribution(1 / 25);
 }
