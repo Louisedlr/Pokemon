@@ -86,7 +86,5 @@ void Player::display_poke_bag()
     for (size_t i = 0; i < _poke_bag.size(); i++) {
         _poke_bag[i].display_pokemon();
         std::cout << std::endl;
-
-        std::cout << "test " << _poke_bag[i].get_PC() << std::endl;
     }
 }

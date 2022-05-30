@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#define SIZE_COLUMN 10
+#define SIZE_COLUMN 20
 
 Map::Map()
 {
@@ -12,7 +12,7 @@ Map::Map()
 
 std::vector<std::vector<char> > Map::load_map()
 {
-    std::string                     filename("/Users/louisedelrieu/Documents/IMAC/IMAC 2/S4/maths/pokemon/src/map.txt");
+    std::string                     filename("/Users/louisedelrieu/Documents/IMAC/IMAC 2/S4/maths/pokemon/src/map_2.txt");
     std::vector<char>               lines;
     std::string                     line;
     std::vector<std::vector<char> > tab(SIZE_COLUMN, std::vector<char>(SIZE_COLUMN));

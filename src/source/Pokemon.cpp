@@ -16,7 +16,7 @@ void Pokemon::display_pokemon()
     if (get_shiny()) {
         std::cout << "ton pokomon est shiny" << std::endl;
     }
-    std::cout << " Types : ";
+    std::cout << "Types : ";
     for (auto i : get_types()) {
         std::cout << i << ", ";
     }
@@ -24,7 +24,7 @@ void Pokemon::display_pokemon()
 
 void Pokemon::random_features()
 {
-    _PC    = Erlang_distribution(1, 5) * 10;
+    _PC    = Erlang_distribution(1, 5) * 100;
     _IV    = Poisson_dstribution(16);
     _PV    = Geometric_distribution(0.2) * 10;
     _shiny = Bernouilli_distribution(1 / 25);

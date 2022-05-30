@@ -46,7 +46,7 @@ bool balanced_dice()
 int Geometric_distribution(float p)
 {
     int x = 1;
-    while (float(rand()) / float(RAND_MAX) > p) {
+    while (Bernouilli_distribution(p) == 0) {
         x += 1;
     }
     return x;
