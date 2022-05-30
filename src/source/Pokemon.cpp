@@ -24,7 +24,7 @@ void Pokemon::display_pokemon()
 
 void Pokemon::random_features()
 {
-    _PC    = Erlang_distribution(1, 5) * 100;
+    _PC    = Erlang_distribution(1, 5) * 10;
     _IV    = Poisson_dstribution(16);
     _PV    = Geometric_distribution(0.2) * 10;
     _shiny = Bernouilli_distribution(1 / 25);

@@ -12,11 +12,13 @@
 int main()
 {
     // int max = 0;
-    // for (int i = 0; i < 500; i++) {
-    //     if (max < Geometric_distribution(0.2)) {
-    //         max = Geometric_distribution(0.2);
+    // int res = 0;
+    // for (int i = 0; i < 200; i++) {
+    //     res = Exponential_distribution(0.25);
+    //     if (max < res) {
+    //         max = res;
     //     }
-    //     std::cout << Geometric_distribution(0.2) << "    ";
+    //     std::cout << res << "    ";
     // }
     // std::cout << "test geo  " << max << std::endl;
 
@@ -92,6 +94,13 @@ int main()
                     char y_n;
                     std::cout << std::endl;
                     std::cout << std::endl;
+                    int index = abs(Exponential_distribution(0.2));
+                    if (index > 31) {
+                        index = 31;
+                    }
+                    std::cout << "C'est un " << pokedex[index].get_name() << std::endl;
+                    std::cout << std::endl;
+                    std::cout << std::endl;
                     std::cout << "Voulez vous attraper ce Pokémon ? (y/n)" << std::endl;
                     std::cin >> y_n;
                     std::cout << std::endl;
@@ -103,7 +112,7 @@ int main()
                         std::cout << std::endl;
                         std::cout << std::endl;
 
-                        int index = abs(Exponential_distribution(0.15));
+                        //int index = abs(Exponential_distribution(0.15));
 
                         pokedex[index].random_features();
                         player.add_pokemon(pokedex[index]);
