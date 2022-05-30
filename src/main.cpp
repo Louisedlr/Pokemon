@@ -94,7 +94,7 @@ int main()
                     char y_n;
                     std::cout << std::endl;
                     std::cout << std::endl;
-                    int index = abs(Exponential_distribution(0.2));
+                    int index = Exponential_distribution(0.2);
                     if (index > 31) {
                         index = 31;
                     }
