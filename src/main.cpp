@@ -11,16 +11,13 @@
 
 int main()
 {
-    // int max = 0;
-    // int res = 0;
-    // for (int i = 0; i < 200; i++) {
-    //     res = Exponential_distribution(0.25);
-    //     if (max < res) {
-    //         max = res;
-    //     }
-    //     std::cout << res << "    ";
-    // }
-    // std::cout << "test geo  " << max << std::endl;
+    int              res   = 0;
+    int              count = 0;
+    std::vector<int> res_bernouilli_3;
+    for (int i = 0; i < 200; i++) {
+        res = Bernouilli_distribution(1. / 3.);
+        res_bernouilli_3.push_back(res);
+    }
 
     std::string name = "lou";
     std::cout << std::endl;
@@ -106,7 +103,7 @@ int main()
                     std::cout << std::endl;
                     std::cout << std::endl;
                     std::cout << std::endl;
-                    if (y_n == 'y' && Bernouilli_distribution(0.5) == 1) {
+                    if (y_n == 'y' && res_bernouilli_3[count] == 1) {
                         std::cout << "Bravo, vous avez attrapé ce Pokémon ! " << std::endl;
                         std::cout << std::endl;
                         std::cout << std::endl;
@@ -122,6 +119,10 @@ int main()
                         std::cout << std::endl;
                         std::cout << std::endl;
                         std::cout << std::endl;
+                    }
+                    count++;
+                    if (count == 201) {
+                        count = 0;
                     }
                 }
                 map.set_player_coord(player.get_coord());
