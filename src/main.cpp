@@ -15,7 +15,6 @@ int main()
     int              count = 0;
     std::vector<int> res_bernouilli_3;
     for (int i = 0; i < 200; i++) {
-        std::cout << Exponential_distribution(0.2) << "    ";
         res = Bernouilli_distribution(1. / 3.);
         res_bernouilli_3.push_back(res);
     }
@@ -93,8 +92,8 @@ int main()
                     std::cout << std::endl;
                     std::cout << std::endl;
                     int index = Exponential_distribution(0.2);
-                    if (index > 31) {
-                        index = 31;
+                    while (index > 31) {
+                        index = Exponential_distribution(0.2);
                     }
                     std::cout << "C'est un " << pokedex[index].get_name() << std::endl;
                     std::cout << std::endl;
