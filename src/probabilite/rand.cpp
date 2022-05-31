@@ -55,13 +55,7 @@ int Geometric_distribution(float p)
 int Exponential_distribution(float lambda)
 {
     float nb_rand = float(rand()) / float(RAND_MAX);
-    float z       = 0;
-    float x       = 0;
-    while (z < nb_rand) {
-        z = 1 - exp(-lambda * x);
-        x++;
-    }
-    return x;
+    return floor((-1 / lambda) * log(1 - nb_rand));
 }
 
 int Poisson_dstribution(float lambda)

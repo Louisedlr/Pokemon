@@ -15,6 +15,7 @@ int main()
     int              count = 0;
     std::vector<int> res_bernouilli_3;
     for (int i = 0; i < 200; i++) {
+        std::cout << Exponential_distribution(0.2) << "    ";
         res = Bernouilli_distribution(1. / 3.);
         res_bernouilli_3.push_back(res);
     }
